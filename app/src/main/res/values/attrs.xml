@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--自动义属性集合，name表示声明的"属性集合"名，可以随便取名，但是建议与自定义控件的名称一致，
+    在该集合下设置不同的自定义属性-->
+    <declare-styleable name="MySelfView">
+        <!--name表示属性名称，format表示属性的类型-->
+        <!--1. string：字符串-->
+        <attr name="titleText" format="string"/>
+        <!--2. color：颜色值 -->
+        <attr name="titleColor" format="color"/>
+        <!--3. dimension：尺寸值-->
+        <attr name="titleSize" format="dimension"/>
+
+
+        <!--4.reference 使用某一资源id-->
+        <attr name="background1" format="reference"/>
+       <!-- // 使用格式
+        <ImageView
+            android:layout_width="42dip"
+            android:layout_height="42dip"
+            android:background1="@drawable/图片ID" />-->
+
+        <!--5. boolean：布尔值-->
+        <attr name="focusable" format="boolean"/>
+       <!-- // 格式使用
+        <Button
+            android:layout_width="42dip"
+            android:layout_height="42dip"
+            android:focusable="true" />-->
+
+        <!--6.float：浮点值-->
+        <attr name="fromAlpha" format="float"/>
+        <attr name="toAlpha" format="float"/>
+    <!--    // 格式使用
+        <alpha
+            android:fromAlpha="1.0"
+            android:toAlpha="0.7" />-->
+
+        <!--7.integer：整型值 -->
+        <attr name="frameDuration" format="integer"/>
+        <attr name="framesCount" format="integer"/>
+       <!-- // 格式使用
+        <animated-rotate
+            android:frameDuration="100"
+            android:framesCount="12"/>-->
+
+        <!--8.fraction：百分数-->
+        <attr name="pivotX" format="fraction"/>
+        <attr name="pivotY" format="fraction"/>
+       <!-- // 格式使用
+        <rotate
+            android:pivotX="200%"
+            android:pivotY="300%"
+            />-->
+
+        <!--9.enum：枚举值-->
+        <attr name="horizontal" format="enum"/>
+        <attr name="vertical" format="enum"/>
+       <!-- // 格式使用
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"/>-->
+
+        <!--10.特别注意：属性定义时可以指定多种类型值-->
+        <attr name="background2" format="reference|color"/>
+       <!-- // 使用
+        <ImageView
+            android:layout_width="42dip"
+            android:layout_height="42dip"
+            android:background2="@drawable/图片ID|#00FF00" />-->
+
+    </declare-styleable>
+</resources>
